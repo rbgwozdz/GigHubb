@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
-namespace GigHubb.Models
+namespace GigHubb.ViewModels
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

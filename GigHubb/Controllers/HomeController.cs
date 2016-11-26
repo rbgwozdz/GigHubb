@@ -1,4 +1,4 @@
-﻿using GigHubb.Models;
+﻿using GigHubb.ViewModels;
 using System;
 using System.Data.Entity;
 using System.Linq;

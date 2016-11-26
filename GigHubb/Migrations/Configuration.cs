@@ -5,14 +5,14 @@ namespace GigHubb.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<GigHubb.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<GigHubb.ViewModels.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(GigHubb.Models.ApplicationDbContext context)
+        protected override void Seed(GigHubb.ViewModels.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GigHubb.Models.Gig>
+﻿@model IEnumerable<GigHubb.ViewModels.Gig>
 @{
     ViewBag.Title = "Home Page";
 }
@@ -6,6 +6,6 @@
 <ul>
     @foreach (var gig in Model)
     {
-        <li>  @gig.DateTime - @gig.Artist.UserName</li>
+        <li>  @gig.DateTime - @gig.Artist.Name</li>
     }
 </ul>

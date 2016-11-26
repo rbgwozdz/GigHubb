@@ -1,4 +1,4 @@
-﻿using GigHubb.Models;
+﻿using GigHubb.ViewModels;
 using GigHubb.ViewModels;
 using Microsoft.AspNet.Identity;
 using System.Linq;
@@ -18,11 +18,11 @@ namespace GigHubb.Controllers
         [Authorize]
         public ActionResult Create()
         {
-
-            var viewModel = new GigFormViewModel()
+            var viewModel = new GigFormViewModel
             {
                 Genres = _context.Genres.ToList()
             };
+
             return View(viewModel);
         }
 
@@ -36,19 +36,19 @@ namespace GigHubb.Controllers
                 viewModel.Genres = _context.Genres.ToList();
                 return View("Create", viewModel);
             }
+
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
                 DateTime = viewModel.GetDateTime(),
                 GenreId = viewModel.Genre,
                 Venue = viewModel.Venue
-
             };
 
             _context.Gigs.Add(gig);
             _context.SaveChanges();
+
             return RedirectToAction("Index", "Home");
         }
-
     }
 }

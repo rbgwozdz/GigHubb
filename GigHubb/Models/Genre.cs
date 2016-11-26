@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GigHubb.Models
+namespace GigHubb.ViewModels
 {
     public class Genre
     {
